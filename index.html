@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StayLux — Browse 500+ premium hotels across India. Filter by city, price, and rating. Find your perfect stay today." />
+  <meta name="keywords" content="hotels, India, booking, luxury, affordable, Goa, Mumbai, Delhi, Bengaluru" />
+  <meta name="author" content="StayLux" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="StayLux — Find Your Perfect Hotel in India" />
+  <meta property="og:description" content="Browse 500+ premium hotels across major Indian cities." />
+  <meta property="og:type" content="website" />
+
+  <title>StayLux — Find Your Perfect Hotel in India</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════ -->
+  <header class="nav" role="banner">
+    <nav class="nav__inner container" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav__logo" aria-label="StayLux home">
+        <span class="nav__logo-icon" aria-hidden="true">🏨</span>
+        <span class="nav__logo-text">StayLux</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="index.html" class="nav__link nav__link--active" aria-current="page">Hotels</a></li>
+        <li><a href="#filters" class="nav__link">Filter</a></li>
+        <li><a href="#footer" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="nav__hamburger"
+        id="mobile-menu-btn"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+      </button>
+
+    </nav>
+  </header>
+
+
+  <!-- ════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__backdrop" aria-hidden="true"></div>
+
+    <div class="hero__content container">
+      <p class="hero__eyebrow">✨ Over 500 hotels across India</p>
+      <h1 class="hero__title" id="hero-title">
+        Find Your<br />
+        <span class="hero__title-accent">Perfect Stay</span>
+      </h1>
+      <p class="hero__subtitle">
+        Discover handpicked hotels in 12 cities — from budget-friendly to ultra-luxury.
+      </p>
+
+      <!-- Inline search bar in hero -->
+      <div class="hero__search" role="search">
+        <label for="search-input" class="sr-only">Search hotels by name or city</label>
+        <input
+          type="search"
+          id="search-input"
+          class="hero__search-input"
+          placeholder="Search by hotel name or city…"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Search hotels"
+        />
+        <button class="hero__search-btn" aria-label="Search" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Stats row -->
+      <div class="hero__stats" aria-label="Key statistics">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-counter="500">0</span>
+          <span class="hero__stat-label">Hotels</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-counter="12">0</span>
+          <span class="hero__stat-label">Cities</span>
+        </div>
+        <div class="hero__stat-divider" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-counter="50000">0</span>
+          <span class="hero__stat-label">Happy Guests</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       FILTERS BAR
+  ════════════════════════════════ -->
+  <section class="filters" id="filters" aria-label="Hotel filters">
+    <div class="filters__inner container">
+
+      <!-- Location -->
+      <div class="filter-group">
+        <label for="location-filter" class="filter-group__label">
+          <span class="filter-group__icon" aria-hidden="true">📍</span>
+          City
+        </label>
+        <select id="location-filter" class="filter-group__select" aria-label="Filter by city">
+          <option value="">All Cities</option>
+          <option value="Ahmedabad">Ahmedabad</option>
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Goa">Goa</option>
+          <option value="Gurgaon">Gurgaon</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Noida">Noida</option>
+          <option value="Pune">Pune</option>
+        </select>
+      </div>
+
+      <!-- Min Price -->
+      <div class="filter-group">
+        <label for="min-price" class="filter-group__label">
+          <span class="filter-group__icon" aria-hidden="true">₹</span>
+          Min Price
+        </label>
+        <input
+          type="number"
+          id="min-price"
+          class="filter-group__input"
+          placeholder="e.g. 1000"
+          min="0"
+          max="99999"
+          aria-label="Minimum price per night"
+        />
+      </div>
+
+      <!-- Max Price -->
+      <div class="filter-group">
+        <label for="max-price" class="filter-group__label">
+          <span class="filter-group__icon" aria-hidden="true">₹</span>
+          Max Price
+        </label>
+        <input
+          type="number"
+          id="max-price"
+          class="filter-group__input"
+          placeholder="e.g. 10000"
+          min="0"
+          max="99999"
+          aria-label="Maximum price per night"
+        />
+      </div>
+
+      <!-- Min Rating -->
+      <div class="filter-group">
+        <label for="min-rating" class="filter-group__label">
+          <span class="filter-group__icon" aria-hidden="true">⭐</span>
+          Min Rating
+        </label>
+        <select id="min-rating" class="filter-group__select" aria-label="Filter by minimum rating">
+          <option value="">Any Rating</option>
+          <option value="2">2+</option>
+          <option value="3">3+</option>
+          <option value="4">4+</option>
+          <option value="4.5">4.5+</option>
+        </select>
+      </div>
+
+      <!-- Sort -->
+      <div class="filter-group">
+        <label for="sort-select" class="filter-group__label">
+          <span class="filter-group__icon" aria-hidden="true">↕</span>
+          Sort By
+        </label>
+        <select id="sort-select" class="filter-group__select" aria-label="Sort hotels">
+          <option value="">Default</option>
+          <option value="price">Price: Low → High</option>
+          <option value="-price">Price: High → Low</option>
+          <option value="-rating">Rating: High → Low</option>
+          <option value="rating">Rating: Low → High</option>
+          <option value="name">Name: A → Z</option>
+        </select>
+      </div>
+
+      <!-- Clear Filters -->
+      <button id="clear-filters-btn" class="btn btn--ghost filters__clear" type="button">
+        Clear All
+      </button>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       HOTEL GRID
+  ════════════════════════════════ -->
+  <main class="main-content" id="main-content">
+    <div class="container">
+
+      <!-- Results header -->
+      <div class="results-header" aria-live="polite" aria-atomic="true">
+        <p class="results-header__count" id="results-count">Loading…</p>
+      </div>
+
+      <!-- Hotel cards grid -->
+      <div
+        class="hotel-grid"
+        id="hotel-grid"
+        role="list"
+        aria-label="Hotel listings"
+      >
+        <!-- Cards injected by app.js -->
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- ════════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer__inner container">
+
+      <div class="footer__brand">
+        <span class="footer__logo" aria-hidden="true">🏨</span>
+        <p class="footer__brand-name">StayLux</p>
+        <p class="footer__tagline">Your gateway to India's finest hotels.</p>
+      </div>
+
+      <div class="footer__links-grid">
+        <div class="footer__col">
+          <h3 class="footer__col-title">Cities</h3>
+          <ul class="footer__link-list" role="list">
+            <li><a href="#" class="footer__link" onclick="document.getElementById('location-filter').value='Mumbai'; return false;">Mumbai</a></li>
+            <li><a href="#" class="footer__link" onclick="document.getElementById('location-filter').value='Delhi'; return false;">Delhi</a></li>
+            <li><a href="#" class="footer__link" onclick="document.getElementById('location-filter').value='Goa'; return false;">Goa</a></li>
+            <li><a href="#" class="footer__link" onclick="document.getElementById('location-filter').value='Bengaluru'; return false;">Bengaluru</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__col-title">API</h3>
+          <ul class="footer__link-list" role="list">
+            <li><a href="https://demohotelsapi.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="footer__link">Documentation</a></li>
+            <li><a href="https://demohotelsapi.pythonanywhere.com/hotels/" target="_blank" rel="noopener noreferrer" class="footer__link">Hotels Endpoint</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__col-title">Project</h3>
+          <ul class="footer__link-list" role="list">
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a></li>
+            <li><a href="README.md" class="footer__link">README</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2025 StayLux. Built with ❤️ by <strong>KAIF</strong> using Vanilla JS &amp; Hotels API.</p>
+    </div>
+  </footer>
+
+
+  <!-- Scroll-to-top button -->
+  <button
+    id="scroll-top-btn"
+    class="scroll-top-btn"
+    aria-label="Scroll to top"
+    title="Back to top"
+  >
+    ↑
+  </button>
+
+
+  <!-- JS modules (type="module" enables ES imports) -->
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
