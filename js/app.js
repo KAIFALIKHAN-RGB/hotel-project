@@ -331,3 +331,16 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollToTop();
   loadHotels();        // Initial data load — no filters applied
 });
+
+/**
+ * Global helper used by footer city quick-links.
+ * Sets the location dropdown and immediately fetches.
+ *
+ * @param {string} city
+ */
+window.filterByCity = function (city) {
+  if (locationFilter) locationFilter.value = city;
+  loadHotels();
+  // Scroll to filters bar so the user sees the updated results
+  document.getElementById('filters')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};

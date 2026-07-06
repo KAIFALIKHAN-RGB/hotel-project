@@ -134,10 +134,10 @@ Then open `http://localhost:8080`.
 
 | Token | Value |
 |---|---|
-| Primary | `#7c6dfa` (violet) |
-| Accent | `#f7a541` (amber) |
-| Background | `#0a0a12` (near-black) |
-| Surface | `#12121e` |
+| Primary | `#111827` (Dark Charcoal) |
+| Accent | `#2563eb` (Royal Blue) |
+| Background | `#f4efe8` (Sand/Warm Cream) |
+| Surface | `rgba(255, 255, 255, 0.45)` (Glassmorphism) |
 | Font | Outfit + DM Sans |
 
 ---
@@ -155,8 +155,8 @@ Then open `http://localhost:8080`.
 
 ## 👨‍💻 Author
 
-Built as a college assignment using the Hotels API by [Aarav Harithas](https://portfolio-aarav.vercel.app).
+Built with ❤️ by **KAIF** using Vanilla JS & Hotels API.
 
 ---
 
-*© 2025 StayLux — All rights reserved.*
+*© 2026 StayLux — All rights reserved.*

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+  <defs>
+    <style>
+      .logo-main { fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+      .logo-accent { fill: currentColor; }
+    </style>
+  </defs>
+  
+  <!-- Crown detail at top (luxury marker) -->
+  <g>
+    <!-- Left crown point -->
+    <path d="M 16 8 L 14 14" class="logo-main" stroke-width="1.5"/>
+    <!-- Center crown peak -->
+    <path d="M 24 6 L 22 13" class="logo-main" stroke-width="1.5"/>
+    <path d="M 24 6 L 26 13" class="logo-main" stroke-width="1.5"/>
+    <!-- Right crown point -->
+    <path d="M 32 8 L 34 14" class="logo-main" stroke-width="1.5"/>
+    <!-- Crown connecting line -->
+    <path d="M 14 14 L 22 13 L 26 13 L 34 14" class="logo-main"/>
+    
+    <!-- Accent dot at peak -->
+    <circle cx="24" cy="5" r="1.2" class="logo-accent"/>
+  </g>
+  
+  <!-- Building body -->
+  <g>
+    <!-- Main building outline -->
+    <rect x="12" y="16" width="24" height="26" rx="1.5" class="logo-main" stroke-width="1.2"/>
+    
+    <!-- Left column of windows -->
+    <circle cx="17" cy="22" r="1.8" class="logo-accent" opacity="0.7"/>
+    <circle cx="17" cy="28" r="1.8" class="logo-accent" opacity="0.7"/>
+    <circle cx="17" cy="34" r="1.8" class="logo-accent" opacity="0.7"/>
+    
+    <!-- Center column of windows -->
+    <circle cx="24" cy="22" r="1.8" class="logo-accent" opacity="0.9"/>
+    <circle cx="24" cy="28" r="1.8" class="logo-accent" opacity="0.9"/>
+    <circle cx="24" cy="34" r="1.8" class="logo-accent" opacity="0.9"/>
+    
+    <!-- Right column of windows -->
+    <circle cx="31" cy="22" r="1.8" class="logo-accent" opacity="0.7"/>
+    <circle cx="31" cy="28" r="1.8" class="logo-accent" opacity="0.7"/>
+    <circle cx="31" cy="34" r="1.8" class="logo-accent" opacity="0.7"/>
+    
+    <!-- Entry door accent -->
+    <rect x="22" y="38" width="4" height="4" rx="0.5" class="logo-accent" opacity="0.6"/>
+  </g>
+  
+  <!-- Decorative horizontal line (luxury detail) -->
+  <line x1="12" y1="40" x2="36" y2="40" class="logo-main" stroke-width="1" opacity="0.8"/>
+</svg>

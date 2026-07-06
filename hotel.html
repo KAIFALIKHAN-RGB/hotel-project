@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StayLux — View hotel details, photo gallery, pricing and description." />
+  <title>Hotel Details — StayLux</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body class="detail-page">
+
+  <!-- ════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════ -->
+  <header class="nav" role="banner">
+    <nav class="nav__inner container" aria-label="Main navigation">
+
+      <a href="index.html" class="nav__logo" aria-label="StayLux home">
+        <span class="nav__logo-icon" aria-hidden="true">🏨</span>
+        <span class="nav__logo-text">StayLux</span>
+      </a>
+
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="index.html" class="nav__link">Hotels</a></li>
+        <li><a href="index.html#filters" class="nav__link">Filter</a></li>
+        <li><a href="index.html#footer" class="nav__link">Contact</a></li>
+      </ul>
+
+      <button
+        class="nav__hamburger"
+        id="mobile-menu-btn"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+        <span class="nav__hamburger-bar"></span>
+      </button>
+
+    </nav>
+  </header>
+
+
+  <!-- ════════════════════════════════
+       BREADCRUMB / BACK BUTTON
+  ════════════════════════════════ -->
+  <div class="breadcrumb container" aria-label="Breadcrumb">
+    <button id="back-btn" class="btn btn--ghost breadcrumb__back" type="button" aria-label="Go back to hotel listings">
+      ← Back to Hotels
+    </button>
+  </div>
+
+
+  <!-- ════════════════════════════════
+       HOTEL DETAIL MAIN LAYOUT
+  ════════════════════════════════ -->
+  <main class="detail-main container" id="hotel-detail" aria-label="Hotel detail">
+
+    <!-- ── Gallery Section ── -->
+    <section class="gallery" aria-label="Hotel photo gallery">
+
+      <!-- Main image -->
+      <div class="gallery__main-wrapper">
+        <img
+          id="gallery-main"
+          class="gallery__main"
+          src=""
+          alt="Hotel main photo"
+          loading="eager"
+          onerror="this.src='assets/images/placeholder.svg'"
+        />
+
+        <!-- Prev / Next controls -->
+        <button id="gallery-prev" class="gallery__arrow gallery__arrow--prev" aria-label="Previous photo" type="button">
+          &#8249;
+        </button>
+        <button id="gallery-next" class="gallery__arrow gallery__arrow--next" aria-label="Next photo" type="button">
+          &#8250;
+        </button>
+      </div>
+
+      <!-- Thumbnail strip -->
+      <div id="gallery-thumbs" class="gallery__thumbs" role="group" aria-label="Photo thumbnails">
+        <!-- Thumbnails injected by hotel.js -->
+      </div>
+
+    </section>
+
+
+    <!-- ── Info Panel ── -->
+    <section class="detail" aria-label="Hotel information">
+
+      <!-- Rating badge -->
+      <div id="detail-badge" class="detail__badge badge--excellent" aria-label="Rating">—</div>
+
+      <!-- Hotel name -->
+      <h1 id="detail-name" class="detail__name">Loading…</h1>
+
+      <!-- Location -->
+      <p id="detail-location" class="detail__location">
+        <span aria-hidden="true">📍</span>
+        <span>—</span>
+      </p>
+
+      <!-- Stars + numeric rating -->
+      <div id="detail-rating" class="detail__rating" aria-label="Hotel rating">
+        <!-- Injected by hotel.js -->
+      </div>
+
+      <!-- Price -->
+      <div class="detail__price-box">
+        <span class="detail__price-label">Price per night</span>
+        <span id="detail-price" class="detail__price">—</span>
+      </div>
+
+      <!-- Divider -->
+      <hr class="detail__divider" aria-hidden="true" />
+
+      <!-- Description -->
+      <div class="detail__desc-block">
+        <h2 class="detail__section-title">About this Hotel</h2>
+        <p id="detail-description" class="detail__description">—</p>
+      </div>
+
+      <!-- Amenity pills (static — for visual richness) -->
+      <div class="detail__amenities" aria-label="Highlighted amenities">
+        <h2 class="detail__section-title">Amenities</h2>
+        <ul class="amenity-list" role="list">
+          <li class="amenity-pill">🛏️ Comfortable Rooms</li>
+          <li class="amenity-pill">🍽️ Restaurant</li>
+          <li class="amenity-pill">🏊 Swimming Pool</li>
+          <li class="amenity-pill">🅿️ Free Parking</li>
+          <li class="amenity-pill">📶 High-Speed Wi-Fi</li>
+          <li class="amenity-pill">💆 Spa & Wellness</li>
+          <li class="amenity-pill">🎯 24/7 Concierge</li>
+          <li class="amenity-pill">🚗 Airport Transfer</li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <a href="index.html" class="btn btn--primary detail__cta">
+        ← Explore More Hotels
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- ════════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="footer__inner container">
+
+      <div class="footer__brand">
+        <span class="footer__logo" aria-hidden="true">🏨</span>
+        <p class="footer__brand-name">StayLux</p>
+        <p class="footer__tagline">Your gateway to India's finest hotels.</p>
+      </div>
+
+      <div class="footer__links-grid">
+        <div class="footer__col">
+          <h3 class="footer__col-title">Quick Links</h3>
+          <ul class="footer__link-list" role="list">
+            <li><a href="index.html" class="footer__link">All Hotels</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">API</h3>
+          <ul class="footer__link-list" role="list">
+            <li><a href="https://demohotelsapi.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="footer__link">Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 StayLux. Built with ❤️ by <strong>KAIF</strong> using Vanilla JS &amp; Hotels API.</p>
+    </div>
+  </footer>
+
+
+  <!-- Scroll-to-top -->
+  <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top" title="Back to top">↑</button>
+
+
+  <!-- JS module -->
+  <script type="module" src="js/hotel.js"></script>
+
+</body>
+</html>

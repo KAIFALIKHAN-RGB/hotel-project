@@ -21,3 +21,13 @@ Desktop.ini
 
 # Logs
 *.log
+
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Agent / Workspace cache
+.agents/
+.gemini/
+.history/
+

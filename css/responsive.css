@@ -1,0 +1,337 @@
+/* =============================================================
+   responsive.css
+   All media queries for mobile, tablet, and desktop breakpoints.
+   This file overrides styles defined in style.css.
+
+   Breakpoints:
+     xs  — max 480px  (small phones)
+     sm  — max 640px  (phones)
+     md  — max 768px  (tablets portrait)
+     lg  — max 1024px (tablets landscape / small laptops)
+     xl  — max 1280px (laptops)
+   =============================================================
+*/
+
+
+/* ─────────────────────────────────────────
+   TABLETS LANDSCAPE / SMALL LAPTOP (≤1024px)
+───────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  /* Detail page — stack gallery + panel */
+  .detail-main {
+    grid-template-columns: 1fr;
+  }
+
+  .detail {
+    position: static;
+  }
+
+  /* Footer — single column */
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer__links-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   TABLETS PORTRAIT (≤768px)
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── Nav: show hamburger, hide links ── */
+  .nav__hamburger {
+    display: flex;
+  }
+
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: rgba(10, 10, 18, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--clr-border);
+    padding: var(--space-md) 0;
+    z-index: 999;
+    animation: fadeInUp 0.2s var(--ease-out) both;
+  }
+
+  .nav__links--open { display: flex; }
+
+  .nav__link {
+    width: 100%;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: 0;
+    font-size: var(--text-md);
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .nav__link:hover,
+  .nav__link--active {
+    color: #fff;
+  }
+
+  .nav__link::after { display: none; }
+
+  .nav__link:hover { background: rgba(255, 255, 255, 0.08); }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 480px;
+    padding-block: var(--space-2xl);
+  }
+
+  .hero__title {
+    font-size: 2.4rem;
+  }
+
+  .hero__stats {
+    gap: var(--space-lg);
+  }
+
+  /* ── Filters bar: scroll horizontally ── */
+  .filters__inner {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: var(--space-md);
+    padding-bottom: var(--space-sm);
+    scrollbar-width: none;
+  }
+
+  .filters__inner::-webkit-scrollbar { display: none; }
+
+  .filter-group {
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+
+  /* ── Hotel grid: 2 columns ── */
+  .hotel-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+  }
+
+  /* ── Detail page ── */
+  .detail-main {
+    padding-inline: var(--space-md);
+  }
+
+  .gallery__thumb {
+    width: 64px;
+    height: 50px;
+  }
+
+  /* ── Footer ── */
+  .footer__links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   PHONES (≤640px)
+───────────────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* ── Container padding ── */
+  .container {
+    padding-inline: var(--space-md);
+  }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 420px;
+    padding-block: var(--space-xl);
+  }
+
+  .hero__title {
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-md);
+  }
+
+  .hero__search {
+    max-width: 100%;
+  }
+
+  .hero__stats {
+    gap: var(--space-md);
+  }
+
+  .hero__stat-number {
+    font-size: var(--text-xl);
+  }
+
+  .hero__stat-divider {
+    height: 28px;
+  }
+
+  /* ── Hotel grid: 1 column ── */
+  .hotel-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* ── Hotel card image shorter ── */
+  .hotel-card__image-wrapper {
+    height: 180px;
+  }
+
+  /* ── Filters: wrap to 2 columns ── */
+  .filters__inner {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .filter-group {
+    min-width: calc(50% - var(--space-md));
+    flex: 1 1 calc(50% - var(--space-md));
+  }
+
+  .filters__clear {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  /* ── Detail page ── */
+  .detail-main {
+    gap: var(--space-lg);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .detail__name { font-size: var(--text-2xl); }
+  .detail__price { font-size: var(--text-2xl); }
+
+  .gallery__arrow {
+    width: 36px; height: 36px;
+    font-size: 1rem;
+  }
+
+  .gallery__thumbs {
+    gap: var(--space-xs);
+  }
+
+  .gallery__thumb {
+    width: 54px;
+    height: 44px;
+  }
+
+  /* ── Footer ── */
+  .footer__inner {
+    gap: var(--space-lg);
+  }
+
+  .footer__links-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* ── Scroll-to-top ── */
+  .scroll-top-btn {
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    width: 40px; height: 40px;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   SMALL PHONES (≤480px)
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  :root {
+    --text-5xl: 2.2rem;
+  }
+
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .hero__search-input {
+    font-size: var(--text-sm);
+  }
+
+  .hero__stats {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .hero__stat-divider { display: none; }
+
+  .hotel-card__name {
+    font-size: var(--text-md);
+  }
+
+  .hotel-card__price-value {
+    font-size: var(--text-lg);
+  }
+
+  .breadcrumb {
+    padding-block: var(--space-md);
+  }
+
+  .detail {
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .amenity-pill {
+    font-size: 0.65rem;
+    padding: 0.25em 0.6em;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   PREFERS REDUCED MOTION
+───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   PRINT
+───────────────────────────────────────── */
+@media print {
+  .nav,
+  .filters,
+  .scroll-top-btn,
+  .hero__search,
+  .hotel-card__btn,
+  .gallery__arrow,
+  .gallery__thumbs,
+  .detail__cta {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .hotel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
