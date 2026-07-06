@@ -6,9 +6,10 @@ A professional **Hotel Listing Web App** built with **HTML5, CSS3, and Vanilla J
 
 ## 🌐 Live Demo
 
-Open `index.html` in a browser (or serve with a local server).
+Visit the active live deployment:  
+👉 **[StayLux Live Demo](https://kaifalikhan-rgb.github.io/hotel-project/)**
 
-> **Note:** ES6 `import/export` modules require a server. Use VS Code's Live Server extension or run:
+> **Note for Local Run:** ES6 modules require a local web server to function properly. If running locally, please use VS Code's Live Server extension or execute:
 > ```bash
 > npx serve .
 > ```
